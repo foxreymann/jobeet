@@ -1,0 +1,19 @@
+Ens\JobBudle\Entity\Category:
+    type: entity
+    table: category
+    id:
+        id: 
+            type: integer
+            generator: { strategy: auto }
+        fields:
+            name:
+                type: string
+                length: 255
+                unique: true
+        oneToMany:
+            jobs:
+                targetEntity: Job
+                mappedBy: category
+            category_affiliates:
+                targetEntity: CategoryAffiliate
+                mappedBy: category                 

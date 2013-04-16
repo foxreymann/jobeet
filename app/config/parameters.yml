@@ -2,9 +2,9 @@ parameters:
     database_driver:   pdo_mysql
     database_host:     127.0.0.1
     database_port:     ~
-    database_name:     symfony
+    database_name:     jobeet 
     database_user:     root
-    database_password: ~
+    database_password: tomasz
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -12,4 +12,4 @@ parameters:
     mailer_password:   ~
 
     locale:            en
-    secret:            ThisTokenIsNotSoSecretChangeIt
+    secret:            ThisTok332222222222
