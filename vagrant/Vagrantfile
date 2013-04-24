@@ -1,0 +1,21 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+
+  config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+  config.vm.network :private_network, ip: "192.168.50.50"
+
+  config.vm.synced_folder "../code", "/srv/www/v2", :nfs => true
+
+  config.vm.provider :virtualbox do |vb|
+     # vb.gui = true
+     vb.customize ["modifyvm", :id, "--memory", "512"]
+  end
+
+  config.vm.provision :shell, :path => "vagrant_bootstrap.sh"
+
+end
