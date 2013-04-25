@@ -1,6 +1,6 @@
 Ens\JobeetBundle\Entity\Job:
     type: entity
-    title: job
+    table: job
     id:
         id:
             type: integer

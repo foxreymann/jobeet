@@ -34,7 +34,7 @@ DirectoryIndex app.php
     # a safe, one-size fits all solution.
     RewriteCond %{REQUEST_URI}::$1 ^(/.+)(.+)::\2$
     RewriteRule ^(.*) - [E=BASE:%1]
-    RewriteRule .? %{ENV:BASE}app.php [L]
+    RewriteRule .? %{ENV:BASE}app_dev.php [L]
 </IfModule>
 
 <IfModule !mod_rewrite.c>
