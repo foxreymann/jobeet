@@ -2,3 +2,6 @@ ens_jobeet:
     resource: "@EnsJobeetBundle/Resources/config/routing.yml"
     prefix:   /
 
+EnsJobeetBundle_ens_job:
+    resource: "@EnsJobeetBundle/Resources/config/routing/job.yml"
+    prefix:   /job

@@ -424,10 +424,7 @@ class Job
      */
     public function getCreatedAt()
     {
-        if(!$this->getCreatedAt())
-        {
-            $this->created_at = new \DateTime();
-        }  
+        return $this->created_at;
     }
 
     /**
