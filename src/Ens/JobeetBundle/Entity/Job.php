@@ -412,7 +412,23 @@ class Job
      */
     public function setCreatedAt($createdAt)
     {
-        $this->created_at = $createdAt;
+        if(!$this->getCreatedAt())
+        {
+            $this->created_at = new \DateTime();
+        }  
+    
+        return $this;
+    }
+    
+    /**
+     * Set updated_at
+     *
+     * @param \DateTime $updatedAt
+     * @return Job
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updated_at = new \DateTime();;
     
         return $this;
     }
@@ -425,19 +441,6 @@ class Job
     public function getCreatedAt()
     {
         return $this->created_at;
-    }
-
-    /**
-     * Set updated_at
-     *
-     * @param \DateTime $updatedAt
-     * @return Job
-     */
-    public function setUpdatedAt($updatedAt)
-    {
-        $this->updated_at = $updatedAt;
-    
-        return $this;
     }
 
     /**
@@ -471,19 +474,6 @@ class Job
     public function getCategory()
     {
         return $this->category;
-    }
-
-    public function setCreatedAtValue()
-    {
-        if(!$this->getCreatedAt())
-        {
-            $this->created_at = new \DateTime();
-        }  
-    }
-    
-    public function setUpdatedAtValue()
-    {
-        $this->updated_at = new \DateTime();
     }
      
 }
