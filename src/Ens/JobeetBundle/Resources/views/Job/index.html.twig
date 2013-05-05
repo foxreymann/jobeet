@@ -1,6 +1,8 @@
-{% extends '::base.html.twig' %}
+{% extends 'EnsJobeetBundle::layout.html.twig' %}
 
-{% block body -%}
+{% block content %}
+
+{% block body%}
     <h1>Job list</h1>
 
     <table class="records_list">
@@ -66,4 +68,5 @@
             </a>
         </li>
     </ul>
-    {% endblock %}
+{% endblock %}
+{% endblock %}
